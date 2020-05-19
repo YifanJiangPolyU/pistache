@@ -21,6 +21,8 @@ option(PISTACHE_BUILD_DOCS "build docs alongside the project" OFF)
 option(PISTACHE_INSTALL "add pistache as install target (recommended)" ON)
 option(PISTACHE_USE_SSL "add support for SSL server" OFF)
 
+set(CMAKE_CXX_FLAGS "-std=c++14 -pthread -Wall")
+
 # require fat LTO objects in static library
 if(CMAKE_CXX_FLAGS MATCHES "-flto")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -ffat-lto-objects")
